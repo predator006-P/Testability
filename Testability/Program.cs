@@ -6,7 +6,7 @@ namespace Testability
     {
         static void Main(string[] args)
         {
-            var orderProcessor = new OrderProcessor();
+            var orderProcessor = new OrderProcessor(new ShippingCalculator());
             var order = new Order {DatePlaced = DateTime.Now, TotalPrice = 15f, Note = "Floor 2/18"};
             var order2 = new Order { DatePlaced = DateTime.Now, TotalPrice = 105f, Note = "Floor 2/18" };
             var order3 = new Order { DatePlaced = DateTime.Now.AddDays(1), TotalPrice = 1015f, Note = "Floor 2/18" };
